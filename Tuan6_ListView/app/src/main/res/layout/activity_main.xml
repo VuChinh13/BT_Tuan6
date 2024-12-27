@@ -42,8 +42,9 @@
                 android:layout_width="0dp"
                 android:gravity="center|left"
                 android:layout_height="match_parent"
-                android:layout_weight="0.7"
+                android:layout_weight="0.5"
                 android:textStyle="bold"
+                android:text="0 selected"
                 android:textSize="20dp"/>
 
 
@@ -56,29 +57,28 @@
                 android:layout_weight="0.2"
                 app:srcCompat="@drawable/ic_delete" />
 
+            <ImageView
+                android:id="@+id/iv_clear_checked"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                app:srcCompat="@drawable/ic_clearselection" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.3"
-            android:orientation="horizontal"
-            android:weightSum="1">
+            android:orientation="horizontal">
 
             <SearchView
                 android:id="@+id/sv_tim_kiem"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.7"
                 android:queryHint="Tìm kiếm theo tên" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bt_tim_kiem"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:background="@drawable/bg_button"
-                android:text="Tìm kiếm" />
         </LinearLayout>
 
         <ListView

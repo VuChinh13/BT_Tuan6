@@ -10,41 +10,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="5"
-        android:padding="10dp"
         android:background="#b3e5fc"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="5">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:background="#f57c00"
             android:layout_marginBottom="20dp"
-            android:text="Chỉnh sửa thông tin nhân viên" />
+            android:layout_weight="0.3"
+            android:background="#f57c00"
+            android:gravity="center"
+            android:text="Chỉnh sửa thông tin"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Họ và tên: "
                 android:textColor="@color/black"
-                android:text="Họ và tên: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"/>
+                android:hint="Nguyễn Văn A"
+                android:inputType="text"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
@@ -53,22 +56,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Ngày sinh: "
                 android:textColor="@color/black"
-                android:text="Ngày sinh: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_ngay_sinh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"/>
+                android:hint="dd/mm/yyyy"
+                android:inputType="text"
+                android:textSize="16sp" />
+
 
         </LinearLayout>
 
@@ -76,46 +83,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="ID: "
                 android:textColor="@color/black"
-                android:text="ID: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:focusable="false"
-                android:clickable="false"
-                android:inputType="text"/>
+                android:hint="00"
+                android:inputType="text"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Quê quán: "
                 android:textColor="@color/black"
-                android:text="Quê quán: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_que_quan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"/>
+                android:hint="Hải Dương"
+                android:inputType="text"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
@@ -124,23 +135,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Phòng ban: "
                 android:textColor="@color/black"
-                android:text="Phòng ban: " />
+                android:textSize="16sp" />
 
-
-            <EditText
-                android:id="@+id/et_phong_ban"
+            <Spinner
+                android:id="@+id/sp_phong_ban"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"/>
+                android:layout_height="match_parent" />
 
 
         </LinearLayout>
@@ -149,45 +158,46 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Trạng thái: "
                 android:textColor="@color/black"
-                android:text="Trạng thái: " />
+                android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/et_trang_thai"
+            <Spinner
+                android:id="@+id/sp_trang_thai"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"/>
-
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Trình độ học vấn: "
                 android:textColor="@color/black"
-                android:text="Trình độ học vấn: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_trinh_do_hoc_van"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"/>
+                android:hint="Đã tốt nghiệp"
+                android:inputType="text"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
@@ -195,22 +205,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.7"
+            android:layout_weight="1.9"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Kinh nghiệm: "
                 android:textColor="@color/black"
-                android:text="Kinh nghiệm: " />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/et_kinh_nghiem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"/>
+                android:hint="Đã từng làm tại công ty A,..."
+                android:inputType="text"
+                android:textSize="16sp" />
 
         </LinearLayout>
 

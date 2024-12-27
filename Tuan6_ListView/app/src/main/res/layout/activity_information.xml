@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Họ và tên: " />
 
@@ -43,7 +43,7 @@
                 android:id="@+id/tv_ten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Vũ Văn Chính" />
 
@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Ngày sinh: " />
 
@@ -68,7 +68,7 @@
                 android:id="@+id/tv_ngay_sinh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="13/08/2004" />
 
@@ -86,7 +86,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="ID: " />
 
@@ -94,7 +94,7 @@
                 android:id="@+id/tv_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Vũ Văn Chính" />
 
@@ -109,7 +109,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Quê quán: " />
 
@@ -117,7 +117,7 @@
                 android:id="@+id/tv_que_quan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Hải Dương" />
 
@@ -134,7 +134,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Phòng ban: " />
 
@@ -142,7 +142,7 @@
                 android:id="@+id/tv_phong_ban"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Kinh doanh" />
 
@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Trạng thái: " />
 
@@ -167,7 +167,7 @@
                 android:id="@+id/tv_trang_thai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Thực tập sinh" />
 
@@ -183,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Trình độ học vấn: " />
 
@@ -191,7 +191,7 @@
                 android:id="@+id/tv_trinh_do_hoc_van"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Đã tốt nghiệp đại học" />
 
@@ -207,7 +207,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Kinh nghiệm: " />
 
@@ -215,7 +215,7 @@
                 android:id="@+id/tv_kinh_nghiem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Đã từng làm tại các doanh nghiệp lớn" />
         </LinearLayout>

@@ -12,7 +12,8 @@ class CustomAdapter(
     val activity: Activity,
     val list: List<OutData>,
     private val selectedItems: MutableList<OutData>,
-    private val tvSelected: TextView // Thêm tham số TextView để cập nhật số lượng
+    private val tvSelected: TextView,
+    private val showCheckbox: Boolean // Thêm một tham số để kiểm tra khi nào cần hiển thị checkbox
 ) : ArrayAdapter<OutData>(activity, R.layout.lv_item, list) {
 
     override fun getCount(): Int {
@@ -35,8 +36,8 @@ class CustomAdapter(
         ten.text = item.ten
         id.text = item.id
 
-        // Hiển thị checkbox nếu có item được chọn
-        checkBox.visibility = if (selectedItems.isNotEmpty()) View.VISIBLE else View.GONE
+        // Hiển thị checkbox hoặc ẩn nó tuỳ thuộc vào trạng thái showCheckbox
+        checkBox.visibility = if (showCheckbox) View.VISIBLE else View.GONE
 
         // Kiểm tra nếu item này đã được chọn
         checkBox.isChecked = selectedItems.contains(item)
@@ -59,3 +60,4 @@ class CustomAdapter(
         return rowView
     }
 }
+

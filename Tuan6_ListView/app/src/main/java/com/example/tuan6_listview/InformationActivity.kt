@@ -17,14 +17,15 @@ class InformationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Nhận dữ liệu từ Intent
-        val ten = intent.getStringExtra("ten")
-        val ngaySinh = intent.getStringExtra("ngay_sinh")
-        val id = intent.getStringExtra("id")
-        val queQuan = intent.getStringExtra("que_quan")
-        val phongBan = intent.getStringExtra("phong_ban")
-        val trangThai = intent.getStringExtra("trang_thai")
-        val trinhDoHocVan = intent.getStringExtra("trinh_do_hoc_van")
-        val kinhNghiem = intent.getStringExtra("kinh_nghiem")
+        val ten = intent.getStringExtra(EXTRA_TEN)
+        val ngaySinh = intent.getStringExtra(EXTRA_NGAY_SINH)
+        val id = intent.getStringExtra(EXTRA_ID)
+        val queQuan = intent.getStringExtra(EXTRA_QUE_QUAN)
+        val phongBan = intent.getStringExtra(EXTRA_PHONG_BAN)
+        val trangThai = intent.getStringExtra(EXTRA_TRANG_THAI)
+        val trinhDoHocVan = intent.getStringExtra(EXTRA_TRINH_DO_HOC_VAN)
+        val kinhNghiem = intent.getStringExtra(EXTRA_KINH_NGHIEM)
+
 
         // Hiển thị dữ liệu lên giao diện
         binding.tvTen.text = ten

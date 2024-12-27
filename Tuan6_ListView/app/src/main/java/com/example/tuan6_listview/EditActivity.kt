@@ -2,6 +2,9 @@ package com.example.tuan6_listview
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,25 +21,50 @@ class EditActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Nhận dữ liệu từ bên MainActivity
-        val ten = intent.getStringExtra("ten")
-        val ngaySinh = intent.getStringExtra("ngay_sinh")
-        val id = intent.getStringExtra("id")
-        val queQuan = intent.getStringExtra("que_quan")
-        val phongBan = intent.getStringExtra("phong_ban")
-        val trangThai = intent.getStringExtra("trang_thai")
-        val trinhDoHocVan = intent.getStringExtra("trinh_do_hoc_van")
-        val kinhNghiem = intent.getStringExtra("kinh_nghiem")
+        val ten = intent.getStringExtra(EXTRA_TEN)
+        val ngaySinh = intent.getStringExtra(EXTRA_NGAY_SINH)
+        val id = intent.getStringExtra(EXTRA_ID)
+        val queQuan = intent.getStringExtra(EXTRA_QUE_QUAN)
+        val phongBan = intent.getStringExtra(EXTRA_PHONG_BAN)
+        val trangThai = intent.getStringExtra(EXTRA_TRANG_THAI)
+        val trinhDoHocVan = intent.getStringExtra(EXTRA_TRINH_DO_HOC_VAN)
+        val kinhNghiem = intent.getStringExtra(EXTRA_KINH_NGHIEM)
+
+        // Tạo một danh sách các lựa chọn cho Spinner
+        val jobOptions = arrayOf("Lập trình viên", "Kinh doanh", "Thiết kế", "Marketing")
+        val statusOptions = arrayOf("Nhân viên chính thức", "Thực tập sinh")
+
+        // Tạo ArrayAdapter cho Spinner công việc
+        val jobAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, jobOptions)
+        jobAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spPhongBan.adapter = jobAdapter
+
+        // Tạo ArrayAdapter cho Spinner trạng thái
+        val statusAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, statusOptions)
+        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spTrangThai.adapter = statusAdapter
+
+        // Thiết lập giá trị mặc định cho spPhongBan (Công việc)
+        val phongBanIndex = jobOptions.indexOf(phongBan)
+        if (phongBanIndex >= 0) {
+            binding.spPhongBan.setSelection(phongBanIndex)
+        }
+
+        // Thiết lập giá trị mặc định cho spTrangThai (Trạng thái)
+        val trangThaiIndex = statusOptions.indexOf(trangThai)
+        if (trangThaiIndex >= 0) {
+            binding.spTrangThai.setSelection(trangThaiIndex)
+        }
+
+
 
         // Hiển thị dữ liệu lên giao diện
         binding.etTen.append(ten)
         binding.etNgaySinh.append(ngaySinh)
         binding.etId.text.append(id)
         binding.etQueQuan.append(queQuan)
-        binding.etPhongBan.append(phongBan)
-        binding.etTrangThai.append(trangThai)
         binding.etTrinhDoHocVan.append(trinhDoHocVan)
         binding.etKinhNghiem.append(kinhNghiem)
-
 
 
         // Xử lí sự kiện khi mà người dùng nhấn vào nút chỉnh sửa
@@ -46,8 +74,8 @@ class EditActivity : AppCompatActivity() {
             val ngaySinh = binding.etNgaySinh.text.toString()
             val id = binding.etId.text.toString()
             val queQuan = binding.etQueQuan.text.toString()
-            val phongBan = binding.etPhongBan.text.toString()
-            val trangThai = binding.etTrangThai.text.toString()
+            val phongBan = binding.spPhongBan.selectedItem.toString()
+            val trangThai = binding.spTrangThai.selectedItem.toString()
             val trinhDoHocVan = binding.etTrinhDoHocVan.text.toString()
             val kinhNghiem = binding.etKinhNghiem.text.toString()
 
@@ -57,14 +85,14 @@ class EditActivity : AppCompatActivity() {
             } else {
                 // Tạo Intent để gửi dữ liệu về MainActivity
                 val resultIntent = Intent().apply {
-                    putExtra("ten", ten)
-                    putExtra("ngay_sinh", ngaySinh)
-                    putExtra("id", id)
-                    putExtra("que_quan", queQuan)
-                    putExtra("phong_ban", phongBan)
-                    putExtra("trang_thai", trangThai)
-                    putExtra("trinh_do_hoc_van", trinhDoHocVan)
-                    putExtra("kinh_nghiem", kinhNghiem)
+                    putExtra(EXTRA_TEN, ten)
+                    putExtra(EXTRA_NGAY_SINH, ngaySinh)
+                    putExtra(EXTRA_ID, id)
+                    putExtra(EXTRA_QUE_QUAN, queQuan)
+                    putExtra(EXTRA_PHONG_BAN, phongBan)
+                    putExtra(EXTRA_TRANG_THAI, trangThai)
+                    putExtra(EXTRA_TRINH_DO_HOC_VAN, trinhDoHocVan)
+                    putExtra(EXTRA_KINH_NGHIEM, kinhNghiem)
                 }
 
                 // Trả dữ liệu về MainActivity

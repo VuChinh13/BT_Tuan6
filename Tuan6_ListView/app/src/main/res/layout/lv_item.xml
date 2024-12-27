@@ -42,8 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="Đây là ID" />
+                    android:textColor="@color/black"/>
 
 
             </LinearLayout>
@@ -66,8 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="Đây là Tên" />
+                    android:textColor="@color/black"/>
 
 
             </LinearLayout>
@@ -83,7 +81,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
-                    app:srcCompat="@drawable/ic_intern" />
+                    app:srcCompat="@drawable/ic_intern"/>
             </LinearLayout>
 
         </LinearLayout>
